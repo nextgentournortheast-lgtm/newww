@@ -1,0 +1,136 @@
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #0ea5e9;
+  --brand-dark: #0284c7;
+  --card: #ffffff;
+  --ring: rgba(14, 165, 233, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 78vh;
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  background:
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.28), transparent 40%),
+    radial-gradient(circle at 20% 10%, rgba(59, 130, 246, 0.22), transparent 35%);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.nav-button,
+.primary-button {
+  text-decoration: none;
+  color: white;
+  background: var(--brand);
+  border-radius: 999px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 500;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 25px var(--ring);
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+}
+
+.hero-content {
+  max-width: 720px;
+  margin-top: 12vh;
+}
+
+.eyebrow {
+  color: var(--brand-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  margin: 0.2rem 0 1rem;
+  line-height: 1.15;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.section {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 4rem);
+}
+
+.services h2 {
+  margin-bottom: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 1.4rem;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p,
+.card li,
+.highlight p,
+footer p {
+  color: var(--muted);
+}
+
+.card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.highlight {
+  text-align: center;
+}
+
+.highlight p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 1.2rem;
+  text-align: center;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+}
